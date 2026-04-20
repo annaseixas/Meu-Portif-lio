@@ -18,52 +18,73 @@
 
 
 body{
-    background-color: var(--cor1);
-    font-family: "Lato";
-    height: 100vh;
+    background-color: var(--cor1); /*cor de fundo do corpo da página*/
+    font-family: "Lato"; /*define a fonte*/
+    height: 100vh; /*Altura total da tela*/
 }
 
-
+/*estilização do cabeçalho*/
 header{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    padding: .8rem;
-    background-color: var(--cor2);
-    min-height: 50px;
+    display: flex; /*ativa o flexbox*/
+    justify-content: space-around; /*espaço entre os elementos*
+    align-items: center; /*alinha verticalmente*/
+    gap: 1rem; /*espaço entre os itens*/
+    flex-wrap: wrap; /*permite quebra de linha*/
+    padding: .8rem; /*espaçamento interno*/
+    background-color: var(--cor2); /*cor de fundo*/
+    min-height: 50px; /*altura minima*/
 }
 
-
-
-
+/*container da imagem da logo*/
 .box-img{
-    max-width: 60px;
-    max-height: 100%;
+    height: 100%;
 }
 
-
-.nav-links{
-    text-decoration: none;
-    color: var(--cor5);
+.img-logomarca{
+    max-width: 60px; /*ocupa largura maxima de 60px*/
+    max-height: 100%; /*ocupa 100% da altura do cabeçalho*/
 }
 
-
-.box-btn-actions{
+/*menu navegação*/
+nav{
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
+/*estilização do menu de navegação*/
+.nav-links{
+    text-decoration: none; /*remove a linha abaixo do texto*/
+    color: var(--cor5); /*muda a cor*/
+}
 
-button, link-actions{
-    padding: .6rem;
-    font-size: .9rem;
-    border-radius: 6px;
-    cursor: pointer;
+.nav-links:hover{
+    color: var(--cor4);
     transition: .4s;
+    text-decoration: underline;
+
 }
 
+/*conteiners de botões*/
+.box-btn-actions{
+    display: flex; /*ativa o flexbox, para que os elementos sejam flexiveis*/
+    gap: 1rem; /*espaçamento entre os botões*/
+}
 
+.bnt-actions{
+    background-color: transparent;
+    border: 1px solid var(--cor3);
+    color: var(--cor3);
+    width: 100px;
+}
 
-
+/*estilo para botões e links com aparencia de botão*/
+button, link-actions{
+    padding: .6rem; /*espaçamento interno*/
+    font-size: .9rem; /*tamanho da fonte*/
+    border-radius: 6px; /*bordas arredondas*/
+    cursor: pointer; /*cursor de clique*/
+    transition: .4s; /*animação suave*/
+}
