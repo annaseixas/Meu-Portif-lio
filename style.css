@@ -88,3 +88,47 @@ button, link-actions{
     cursor: pointer; /*cursor de clique*/
     transition: .4s; /*animação suave*/
 }
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section{
+    padding: 4rem;
+}
+
+.first-section{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 600px;
+}
+
+.first-section > div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 300px;
+}
+
+h1{
+    font-size: 2rem;
+    color: var(--cor4);
+    letter-spacing: 8px;
+}
+
+strong{
+    color: var(--cor5);
+}
+
+.first-section p{
+    color: var(--cor4);
+}
+
+.box-img-main{
+    max-width: 450px;
+    padding: 1rem;
+}
