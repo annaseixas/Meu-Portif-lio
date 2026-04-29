@@ -26,7 +26,7 @@ body{
 /*estilização do cabeçalho*/
 header{
     display: flex; /*ativa o flexbox*/
-    justify-content: space-around; /*espaço entre os elementos*
+    justify-content: space-around; /*espaço entre os elementos*/
     align-items: center; /*alinha verticalmente*/
     gap: 1rem; /*espaço entre os itens*/
     flex-wrap: wrap; /*permite quebra de linha*/
@@ -73,10 +73,10 @@ nav{
     gap: 1rem; /*espaçamento entre os botões*/
 }
 
-.bnt-actions{
-    background-color: transparent;
-    border: 1px solid var(--cor3);
-    color: var(--cor3);
+.btn-actions{
+    background-color: var(--cor5);
+    border: 1px solid var(--cor1);
+    color: var(--cor1);
     width: 100px;
 }
 
@@ -131,4 +131,57 @@ strong{
 .box-img-main{
     max-width: 450px;
     padding: 1rem;
+}
+
+.img-perfil{
+    border-radius: 50%;
+    width: 100%;
+}
+
+.second-section{
+    background-color: var(--cor3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.second-section ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.second-section ul li{
+    color: var(--cor5);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.title{
+    color: var(--cor5);
+}
+
+.second-section ul li:hover{
+    color: var(--cor1);
+    transition: .4s;
+    cursor: default;
+}
+
+.third-section{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.third-section > div{
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
