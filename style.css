@@ -172,6 +172,7 @@ strong{
 
 .title{
     color: var(--cor5);
+    text-align: center;
 }
 
 .second-section ul li:hover{
@@ -219,4 +220,18 @@ strong{
 
 footer h2{
     color: var(--cor5);
+    text-align: center;
+}
+
+footer{
+    display: flex;
+    padding: 4rem;
+    flex-direction: column;
+    gap: 2rem;
+}
+footer div{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
