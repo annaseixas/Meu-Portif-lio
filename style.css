@@ -7,20 +7,51 @@
     padding: 0;
 }
 
-
 :root{
-    --cor1: #F28D9F; /*cor principal*/
-    --cor2: #F2ACB9;
-    --cor3: #F2BBBF;
-    --cor4: #F2D0D0;
-    --cor5: #F2F0F0;
+    --rosa1: #F28D9F;
+    --rosa2: #F2ACB9;
+    --rosa3: #F2BBBF;
+    --rosa4: #F2D0D0;
+    --rosa5: #F2F0F0;
 }
 
+/* TEMA CLARO */
+.light-theme{
+    --bg: var(--rosa1);
+    --header: var(--rosa2);
+    --section: var(--rosa3);
+
+    --text: var(--rosa5);
+    --text-soft: var(--rosa4);
+
+    --button-bg: var(--rosa5);
+    --button-text: var(--rosa1);
+
+    --hover: var(--rosa4);
+}
+
+/* TEMA ESCURO */
+.dark-theme{
+    --bg: #121212;
+    --header: #1E1E1E;
+    --section: #2B2B2B;
+
+    --text: #FFFFFF;
+    --text-soft: #CFCFCF;
+
+    --button-bg: #333333;
+    --button-text: #FFFFFF;
+
+    --hover: #444444;
+}
 
 body{
-    background-color: var(--cor1); /*cor de fundo do corpo da página*/
-    font-family: "Lato"; /*define a fonte*/
-    height: 100vh; /*Altura total da tela*/
+    background-color: var(--bg);
+    color: var(--text);
+    transition: 0.4s;
+    font-family: "Lato";
+    height: 100vh;
+    transition: 0.4s;
 }
 
 /*estilização do cabeçalho*/
@@ -31,7 +62,8 @@ header{
     gap: 1rem; /*espaço entre os itens*/
     flex-wrap: wrap; /*permite quebra de linha*/
     padding: .8rem; /*espaçamento interno*/
-    background-color: var(--cor2); /*cor de fundo*/
+    background-color: var(--header);
+    transition: 0.4s;
     min-height: 50px; /*altura minima*/
 }
 
@@ -57,21 +89,49 @@ nav{
 /*estilização do menu de navegação*/
 .nav-links{
     text-decoration: none; /*remove a linha abaixo do texto*/
-    color: var(--cor5); /*muda a cor*/
+    color: var(--text); /*muda a cor*/
 }
 
 .nav-links:hover{
-    color: var(--cor4);
+    color: var(--hover);
     transition: .4s;
     text-decoration: none;
 
 }
 
 /*conteiners de botões*/
-.box-btn-actions{
-    display: flex; /*ativa o flexbox, para que os elementos sejam flexiveis*/
-    gap: 1rem; /*espaçamento entre os botões*/
+.btn-actions{
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    width: 100px;
+    transition: 0.4s;
 }
+
+.btn-tema{
+    background-color: var(--button-bg);
+    position: absolute;
+    top: 20px;
+    left: 1750px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--button-text);
+} 
+
+.btn-actions:hover{
+    background-color: var(--hover);
+}
+
+
+/*
+.btn-tema{
+    background-color: var(--cor5);
+    border: 1px solid var(--cor1);
+    color: var(--cor1);
+    width: 100px;
+} 
 
 .btn-actions{
     background-color: var(--cor5);
@@ -80,10 +140,24 @@ nav{
     width: 100px;
 }
 
-.btn-actions:hover{
-    background-color: var(--cor4);
-    border: var(--cor5);
+
+
+.btn{
+    position: absolute;
+    top: 20px;
+    left: 300px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
 }
+
+.btn:focus{
+    outline: none;
+}
+*/
 
 /*estilo para botões e links com aparencia de botão*/
 button, .link-actions{
@@ -124,16 +198,16 @@ section{
 
 h1{
     font-size: 2rem;
-    color: var(--cor4);
+    color: var(--text-soft);
     letter-spacing: 8px;
 }
 
 strong{
-    color: var(--cor5);
+    color: var(--text);
 }
 
 .first-section p{
-    color: var(--cor4);
+    color: var(--text-soft);
 }
 
 .box-img-main{
@@ -147,7 +221,8 @@ strong{
 }
 
 .second-section, .fourth-section{
-    background-color: var(--cor3);
+    background-color: var(--section);
+    transition: 0.4s;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -165,18 +240,18 @@ strong{
 }
 
 .second-section ul li{
-    color: var(--cor5);
+    color: var(--text);
     letter-spacing: 2px;
     font-weight: bold;
 }
 
 .title{
-    color: var(--cor5);
+    color: var(--text);
     text-align: center;
 }
 
 .second-section ul li:hover{
-    color: var(--cor1);
+    color: var(--hover);
     transition: .4s;
     cursor: default;
 }
@@ -202,7 +277,7 @@ strong{
 
 .third-section > div p{
     max-width: 600px;
-    color: var(--cor4);
+    color: var(--text-soft);
     text-align: justify;
 }
 
@@ -211,15 +286,15 @@ strong{
 }
 
 .fourth-section p{
-    color: var(--cor5);
+    color: var(--text-soft);
 }
 
 .fourth-section h2{
-    color: var(--cor5);
+    color: var(--text);
 }
 
 footer h2{
-    color: var(--cor5);
+    color: var(--text);
     text-align: center;
 }
 
@@ -234,4 +309,24 @@ footer div{
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
+}
+
+#my-projects-list{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#my-projects-list > a{
+    text-decoration: none;
+    color: var(--text);
+}
+
+#my-projects-list > a:hover{
+    color: var(--hover);
+    transition: .4s;
+    cursor: pointer;
 }
